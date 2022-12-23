@@ -1,3 +1,4 @@
+from django.db.models import Sum, Max
 from django.shortcuts import render, redirect
 from .models import Book
 from .forms import BookCreate
@@ -41,3 +42,8 @@ def delete_book(request, book_id):
         return redirect('index')
     book_shelf.delete()
     return redirect('index')
+
+
+def aggrigate(request):
+    _max = Book.objects.all().aggregate(max = Max('price'))
+    return render(request, 'book/agg.html', {"max" : _max})

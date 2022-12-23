@@ -8,8 +8,9 @@ urlpatterns = [
     path('upload/', views.upload, name='upload-book'),
     path('update/<int:book_id>', views.update_book),
     path('delete/<int:book_id>', views.delete_book),
+    path('agg', views.aggrigate, name='agg'),
 ]
 
 if DEBUG:
-    urlpatterns += static(STATIC_URL, document_root = STATIC_ROOT)
-    urlpatterns += static(MEDIA_URL, document_root = MEDIA_ROOT)
+    urlpatterns += static(STATIC_URL, document_root=STATIC_ROOT)
+    urlpatterns += static(MEDIA_URL, document_root=MEDIA_ROOT)

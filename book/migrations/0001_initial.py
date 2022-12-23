@@ -17,6 +17,7 @@ class Migration(migrations.Migration):
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=50)),
                 ('picture', models.ImageField(upload_to='')),
+                ('price', models.IntegerField(default=0)),
                 ('author', models.CharField(default='Guest', max_length=30)),
                 ('email', models.EmailField(blank=True, max_length=254)),
                 ('description', models.TextField(default='Available in DIU')),

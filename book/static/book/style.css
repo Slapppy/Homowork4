@@ -14,8 +14,8 @@
 
 body {
      background: linear-gradient(-45deg,
-       #ee7752,
-       #e73c7e,
+     #d033a4,
+     #a33ce7,
        #23a6d5,
        #23d5ab
      );
@@ -23,3 +23,16 @@ body {
      animation: gradient 45s ease infinite;
      height: 100vh;
  }
+
+.border {
+    border-radius: 15px;
+    background: rgba(255,255,255,0.5);
+    -webkit-backdrop-filter: blur(7px);
+    backdrop-filter: blur(7px);
+    border: 1px solid rgba(255,255,255,0.25);
+}
+
+.card-columns{
+    display: flex;
+    gap: 30px;
+}
